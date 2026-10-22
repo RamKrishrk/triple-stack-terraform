@@ -1,0 +1,12 @@
+aws_region   = "ap-south-1"
+project_name = "triple-stack"
+environment  = "dev"
+
+# Dev: one NAT, single-AZ DB. Prod: set false / true respectively.
+single_nat_gateway     = true
+db_multi_az            = false
+db_deletion_protection = false
+db_skip_final_snapshot = true
+
+# Restrict public access if needed, e.g. your office IP
+allowed_http_cidrs = ["0.0.0.0/0"]
